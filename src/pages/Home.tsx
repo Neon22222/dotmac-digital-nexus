@@ -62,84 +62,38 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-0 overflow-hidden bg-primary">
-        {/* Dotted Pattern Overlay */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
         <div 
-          className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10"
+          className="absolute inset-0 z-0 opacity-20"
           style={{
-            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-            backgroundSize: '20px 20px'
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
           }}
         />
+        <div className="absolute inset-0 gradient-hero z-0" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
-            {/* Left Content */}
-            <div className="animate-fade-in text-white">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Empowering Nigeria Through
-                <span className="block mt-2">Innovative Technology Solutions</span>
-              </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
-                Comprehensive ICT and digital infrastructure provider, delivering cutting-edge solutions for homes, businesses, and government agencies across Nigeria.
-              </p>
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Transform Your Digital
+              <span className="text-gradient"> Infrastructure</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              Comprehensive ICT solutions for homes, businesses, and government agencies across Nigeria. 
+              From cloud services to cybersecurity, we power your digital transformation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/services">
-                <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90">
-                  Learn More
+                <Button size="lg" className="text-lg px-8 py-6 hover-glow">
+                  Explore Our Services
                 </Button>
               </Link>
-            </div>
-            
-            {/* Right Floating Cards */}
-            <div className="relative hidden lg:block h-[500px]">
-              <div className="absolute top-0 right-0 glass rounded-2xl p-6 w-48 animate-float">
-                <Cloud className="h-12 w-12 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground">Cloud Solutions</h3>
-              </div>
-              <div className="absolute top-1/4 left-0 glass rounded-2xl p-6 w-48 animate-float" style={{ animationDelay: '1s' }}>
-                <Shield className="h-12 w-12 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground">Cybersecurity</h3>
-              </div>
-              <div className="absolute bottom-1/4 right-12 glass rounded-2xl p-6 w-48 animate-float" style={{ animationDelay: '2s' }}>
-                <Building2 className="h-12 w-12 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground">Gov Services</h3>
-              </div>
-              <div className="absolute bottom-0 left-1/4 glass rounded-2xl p-6 w-48 animate-float" style={{ animationDelay: '3s' }}>
-                <Network className="h-12 w-12 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground">IT Solutions</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Stats Section with Curved Transition */}
-        <div className="relative mt-16">
-          {/* Curved top edge */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-background" style={{
-            clipPath: 'ellipse(70% 100% at 50% 100%)',
-            transform: 'translateY(-100%)'
-          }} />
-          
-          <div className="bg-background pt-16 pb-12">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">10+</div>
-                  <div className="text-muted-foreground">Years of Innovation</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-muted-foreground">Clients Served</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">15+</div>
-                  <div className="text-muted-foreground">Service Solutions</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">24/7</div>
-                  <div className="text-muted-foreground">Technical Support</div>
-                </div>
-              </div>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
