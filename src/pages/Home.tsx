@@ -5,6 +5,8 @@ import {
   Wifi, Server, Camera, Mail, Globe, Cpu 
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
+import LogoCarousel from "@/components/LogoCarousel";
+import DottedMap from "@/components/DottedMap";
 import heroImage from "@/assets/hero-tech.jpg";
 
 const Home = () => {
@@ -63,14 +65,10 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-0 overflow-hidden bg-primary">
-        {/* Dotted Pattern Overlay */}
-        <div 
-          className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-            backgroundSize: '20px 20px'
-          }}
-        />
+        {/* Dotted Map Background */}
+        <div className="absolute inset-0 z-0 opacity-10">
+          <DottedMap />
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
@@ -217,6 +215,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Logo Carousel */}
+      <LogoCarousel />
 
       {/* CTA Section */}
       <section className="py-20">

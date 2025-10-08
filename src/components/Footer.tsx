@@ -49,28 +49,24 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
-        {/* Curved top edge for footer */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-primary" style={{
-          clipPath: 'ellipse(70% 100% at 50% 0%)'
-        }} />
+
       </section>
     
-      <footer className="bg-primary text-white relative">
-        <div className="container mx-auto px-4 pt-20 pb-12">
+      <footer className="bg-background text-foreground relative border-t">
+        <div className="container mx-auto px-4 pt-12 pb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info with Mission/Vision */}
             <div className="space-y-4">
-              <img src={dotmacLogo} alt="Dotmac Technologies" className="h-10 w-auto brightness-0 invert" />
+              <img src={dotmacLogo} alt="Dotmac Technologies" className="h-10 w-auto" />
               <div>
-                <h4 className="font-bold text-white mb-2">Our Vision</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <h4 className="font-bold text-foreground mb-2">Our Vision</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   To be the leading provider of innovative technology solutions that improve the quality of life.
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-white mb-2">Our Mission</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <h4 className="font-bold text-foreground mb-2">Our Mission</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   To design and deploy innovative and beneficial technology solutions, while creating value for all our stakeholders.
                 </p>
               </div>
@@ -78,13 +74,13 @@ const Footer = () => {
 
             {/* Company Links */}
             <div>
-              <h3 className="font-bold text-lg mb-4 text-white">Company</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">Company</h3>
               <ul className="space-y-2">
                 {quickLinks.slice(0, 6).map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-white/80 hover:text-white transition-colors text-sm"
+                      className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
                       {link.name}
                     </Link>
@@ -95,13 +91,13 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h3 className="font-bold text-lg mb-4 text-white">Services</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">Services</h3>
               <ul className="space-y-2">
                 {services.slice(0, 6).map((service) => (
                   <li key={service}>
                     <Link
                       to="/services"
-                      className="text-white/80 hover:text-white transition-colors text-sm"
+                      className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                     >
                       {service}
                     </Link>
@@ -112,34 +108,34 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h3 className="font-bold text-lg mb-4 text-white">Contact</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">Contact</h3>
               <div className="space-y-4 text-sm">
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-white" />
+                  <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-5 w-5 text-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-white mb-1">Send us a message</p>
-                    <a href="mailto:info@dotmac.ng" className="text-white/80 hover:text-white transition-colors">
+                    <p className="font-semibold text-foreground mb-1">Send us a message</p>
+                    <a href="mailto:info@dotmac.ng" className="text-muted-foreground hover:text-foreground transition-colors">
                       info@dotmac.ng
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-white" />
+                  <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
+                    <Phone className="h-5 w-5 text-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-white mb-1">Talk to us</p>
-                    <a href="tel:02019125161" className="text-white/80 hover:text-white transition-colors block">
+                    <p className="font-semibold text-foreground mb-1">Talk to us</p>
+                    <a href="tel:02019125161" className="text-muted-foreground hover:text-foreground transition-colors block">
                       02019125161
                     </a>
                     <a
                       href="https://wa.me/2348121179536"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/80 hover:text-white transition-colors"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       +234 812 117 9536
                     </a>
@@ -147,12 +143,12 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-white" />
+                  <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-5 w-5 text-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-white mb-1">Where we are</p>
-                    <p className="text-white/80 text-xs">
+                    <p className="font-semibold text-foreground mb-1">Where we are</p>
+                    <p className="text-muted-foreground text-xs">
                       Abuja: Area 11, Garki<br />
                       Lagos: Allen Avenue, Ikeja
                     </p>
@@ -170,45 +166,45 @@ const Footer = () => {
               href="https://facebook.com/dotmac.ng"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-white/90 transition-colors"
+              className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-border transition-colors"
               aria-label="Facebook"
             >
-              <Facebook className="h-5 w-5 text-primary" />
+              <Facebook className="h-5 w-5 text-foreground" />
             </a>
             <a
               href="https://twitter.com/dotmac_ng"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-white/90 transition-colors"
+              className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-border transition-colors"
               aria-label="Twitter"
             >
-              <Twitter className="h-5 w-5 text-primary" />
+              <Twitter className="h-5 w-5 text-foreground" />
             </a>
             <a
               href="https://instagram.com/dotmac_ng"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-white/90 transition-colors"
+              className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-border transition-colors"
               aria-label="Instagram"
             >
-              <Instagram className="h-5 w-5 text-primary" />
+              <Instagram className="h-5 w-5 text-foreground" />
             </a>
             <a
               href="https://linkedin.com/company/dotmac-broadband-internet"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-white/90 transition-colors"
+              className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-border transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5 text-primary" />
+              <Linkedin className="h-5 w-5 text-foreground" />
             </a>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="container mx-auto px-4 pt-8 border-t border-white/20">
+        <div className="container mx-auto px-4 pt-8 border-t border-border">
           <div className="text-center">
-            <p className="text-sm text-white/80">
+            <p className="text-sm text-muted-foreground">
               © {currentYear} Dotmac Technologies PLC. All rights reserved.
             </p>
           </div>
