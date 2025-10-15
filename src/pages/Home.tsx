@@ -66,8 +66,8 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-0 overflow-hidden bg-primary">
-        {/* Dotted Map Background */}
-        <div className="absolute inset-0 z-0 opacity-10">
+        {/* Nigeria Map Background */}
+        <div className="absolute inset-0 z-0 text-white/10">
           <DottedMap />
         </div>
         
