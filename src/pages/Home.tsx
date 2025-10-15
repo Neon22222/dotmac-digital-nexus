@@ -7,6 +7,7 @@ import {
 import ServiceCard from "@/components/ServiceCard";
 import LogoCarousel from "@/components/LogoCarousel";
 import DottedMap from "@/components/DottedMap";
+import ScrollReveal from "@/components/ScrollReveal";
 import heroImage from "@/assets/hero-tech.jpg";
 
 const Home = () => {
@@ -146,18 +147,20 @@ const Home = () => {
       {/* Services Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              End-to-end ICT solutions tailored to meet the unique needs of your organization
-            </p>
-          </div>
+          <ScrollReveal direction="mask">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                End-to-end ICT solutions tailored to meet the unique needs of your organization
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={service.title} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <ScrollReveal key={service.title} direction="up" delay={index * 0.1}>
                 <ServiceCard {...service} />
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
@@ -174,12 +177,14 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Dotmac?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Trusted by businesses and government agencies across Nigeria
-            </p>
-          </div>
+          <ScrollReveal direction="mask">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose Dotmac?</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Trusted by businesses and government agencies across Nigeria
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -203,14 +208,16 @@ const Home = () => {
                 title: "Proven Track Record", 
                 description: "Serving SMEs, enterprises, and government"
               }
-            ].map((feature) => (
-              <div key={feature.title} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-primary" />
+            ].map((feature, index) => (
+              <ScrollReveal key={feature.title} direction="up" delay={index * 0.15}>
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -222,30 +229,32 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="glass rounded-3xl p-12 text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Get in touch with our team to discuss your ICT infrastructure needs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="text-lg px-8 py-6">
-                  Get Started Today
-                </Button>
-              </Link>
-              <a 
-                href="https://wa.me/2348121179536" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                  Chat on WhatsApp
-                </Button>
-              </a>
+          <ScrollReveal direction="mask">
+            <div className="glass rounded-3xl p-12 text-center max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Get in touch with our team to discuss your ICT infrastructure needs
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <Button size="lg" className="text-lg px-8 py-6">
+                    Get Started Today
+                  </Button>
+                </Link>
+                <a 
+                  href="https://wa.me/2348121179536" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                    Chat on WhatsApp
+                  </Button>
+                </a>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>
